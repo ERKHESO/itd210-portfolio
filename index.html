@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================
+   HEAD SECTION
+   This section sets the character encoding,
+   responsive viewport, page title, stylesheet,
+   and Google Fonts for the homepage.
+  ========================================= -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erkhes Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- =========================================
+   HEADER SECTION
+   This section creates the top navigation area.
+   Flexbox is used so the site title and links can
+   stack on small screens and line up on larger screens.
+  ========================================= -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <div class="site-title">Erkhes Portfolio</div>
+
+      <!-- =========================================
+       NAV SECTION
+       This navigation helps users move through the site.
+       It stays simple and clean to match the homepage style.
+      ========================================= -->
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Media</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================
+   HERO SECTION
+   This section displays a large hero image at the top
+   of the homepage to create a strong visual first impression.
+  ========================================= -->
+  <section class="hero-section">
+    <div class="container hero-wrap">
+      <img src="assets/hero.png" alt="Hero image showing featured portfolio work" class="hero-image">
+    </div>
+  </section>
+
+  <!-- =========================================
+   MAIN SECTION
+   This is the main content area of the homepage.
+   It includes the featured work section using CSS Grid.
+  ========================================= -->
+  <main class="container">
+
+    <!-- =========================================
+     WORK SECTION
+     This section highlights featured projects or pieces.
+     CSS Grid is used here so the cards stack on mobile,
+     become 2 columns on tablet, and 4 columns on desktop.
+    ========================================= -->
+    <section class="work-section" id="episodes">
+      <h2>Work</h2>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <img src="assets/hero.png" alt="Preview of featured project one">
+          <p>Put some text here</p>
+        </article>
+
+        <article class="work-card">
+          <img src="assets/hero.png" alt="Preview of featured project two">
+          <p>Put some text here</p>
+        </article>
+
+        <article class="work-card">
+          <img src="assets/hero.png" alt="Preview of featured project three">
+          <p>Put some text here</p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================
+   FOOTER SECTION
+   This section closes the homepage and matches
+   the dark footer style from your original layout.
+  ========================================= -->
+  <footer class="site-footer">
+    <p>&copy; Erkhes Otgontsetseg 2026</p>
+  </footer>
+
+</body>
+</html>
