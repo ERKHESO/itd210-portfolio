@@ -1,72 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>7teen Entertainment</title>
-    <link rel="stylesheet" href="css/custom.css" />
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Contact | Erkhes Portfolio</title>
+</head>
 
-  <body>
-	  <div class="w3-top w3-white">
-		  <div class="w3-auto w3-bar w3-padding" style="max-width: 1500px"> Erkhes Portfolio
-		  <div class="w3-right">
-			  <a href="https://www.aiga.org/" class="w3-button">Home</a>
-			 <a href="https://www.google.org/" class="w3-button">About</a>
- 			<a href="https://www.aiga.org/" class="w3-button">Gallery</a>
-			 <a href="https://www.google.org/" class="w3-button">Media</a>
-			  <a href="https://www.google.org/" class="w3-button">Contact</a>
-			</div>
-		  </div>
-  </div>
-	  
-	  <div class="w3-container w3-content" style="max-width: 1500px">
-		  <img class="w3-image" src="assets/hero.png" alt="hero image" width="1500">
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 flex justify-between items-center py-4">
+
+      <div class="text-xl font-semibold">
+        Erkhes Portfolio
       </div>
 
-	  
-	 <div class="w3-content" style="max-width:1500px">
-  <div class="w3-container w3-padding-32" id="episodes">
-    <h2>Work</h2>
-
-    <div class="w3-row-padding">
-      
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="assets/hero.png" style="width:100%">
-		  <p>Put some text here</p>
+      <div class="flex gap-6 text-sm text-gray-600">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+        <a href="gallery.html" class="hover:text-blue-600 transition">Gallery</a>
+        <a href="media.html" class="hover:text-blue-600 transition">Media</a>
+        <a href="contact.html" class="text-blue-600">Contact</a>
       </div>
 
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="assets/hero.png" style="width:100%">
-		  <p>Put some text here</p>
-      </div>
+    </nav>
+  </header>
 
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="assets/hero.png" style="width:100%">
-		  <p>Put some text here</p>
-      </div>
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 py-16">
 
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="assets/hero.png" style="width:100%">
-		  <p>Put some text here</p>
-      </div>
+    <!-- TITLE -->
+    <section class="mb-12">
+      <h1 class="text-4xl font-bold mb-4">Contact</h1>
+      <p class="text-gray-500 max-w-xl">
+        If you’d like to connect or ask about my work, feel free to send a message.
+      </p>
+    </section>
 
-    </div>
-  </div>
-</div>
-	  
-    <main>
-      
-    </main>
+    <!-- CONTENT -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-	  <!--Footer-->
-    <footer class="w3-center w3-black w3-padding-16">
-        <p>
-         &copy; Erkhes Otgontsetseg 2026
+      <!-- LEFT -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Contact Info</h2>
+
+        <p class="text-gray-600 mb-4">
+          Graphic design and web development student creating clean and modern digital work.
         </p>
+
+        <p class="text-gray-600"><strong>Email:</strong> Erkeenee@yahoo.com</p>
+        <p class="text-gray-600"><strong>Location:</strong> Northern Virginia</p>
       </div>
-    </footer>
-  </body>
+
+      <!-- RIGHT (FORM) -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Send Message</h2>
+
+        <form class="flex flex-col gap-4">
+
+          <input type="text" placeholder="Your name"
+            class="px-4 py-2 border border-gray-300 rounded">
+
+          <input type="email" placeholder="Your email"
+            class="px-4 py-2 border border-gray-300 rounded">
+
+          <textarea rows="4" placeholder="Your message"
+            class="px-4 py-2 border border-gray-300 rounded"></textarea>
+
+          <button
+            class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-6">
+    <p>&copy; Erkhes Otgontsetseg 2026</p>
+  </footer>
+
+</body>
 </html>
