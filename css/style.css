@@ -4,7 +4,6 @@
 well on small screens first, then I adjust it for larger screens later. */
 
 body, h1, h2, h3 {
-  /* I am using the Manrope font for a clean modern look */
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -12,20 +11,16 @@ body, h1, h2, h3 {
 }
 
 body {
-  margin: 0;                 /* Removes the browser’s default margin */
-  background: #f4f4f4;       /* Light background for the page */
-  color: #111;               /* Dark text for readability */
-  line-height: 1.6;          /* Adds spacing between lines of text */
+  margin: 0;
+  background: #f4f4f4;
+  color: #111;
+  line-height: 1.6;
 }
-
-/* Makes images responsive so they do not overflow their container */
 
 img {
   max-width: 100%;
   display: block;
 }
-
-/* Basic link styling for navigation and text links */
 
 a {
   color: #000;
@@ -36,18 +31,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Container keeps my content centered and prevents it from becoming
-too wide on very large screens */
-
 .container {
   max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Header and navigation styles. I used Flexbox so the navigation
-can stack on mobile and align in a row on larger screens */
-
+/* header */
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid #ddd;
@@ -77,106 +67,7 @@ can stack on mobile and align in a row on larger screens */
   font-weight: 700;
 }
 
-/* Hero section holds the large image at the top of the page */
-
-.hero-section {
-  background: #ffffff;
-}
-
-.hero-wrap {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.hero-image {
-  width: 100%;
-  height: auto;
-}
-
-/* About section uses CSS Grid so the image and text can
-stack on mobile and sit side-by-side on larger screens */
-
-.about-section {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-.about-section h1 {
-  margin-bottom: 30px;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  align-items: center;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.about-text h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  font-weight: 500;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-/* Work section shows my featured projects.
-I used CSS Grid so the cards can adjust columns depending on screen size */
-
-.work-section {
-  margin-bottom: 40px;
-}
-
-.work-section h2 {
-  margin-bottom: 20px;
-}
-
-.work-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.work-card img {
-  width: 100%;
-}
-
-.work-card p {
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-/* Skills section uses Flexbox so the skill tags wrap nicely
-across the screen */
-
-.skills-section {
-  margin-bottom: 40px;
-}
-
-.skills-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.skill-chip {
-  background: #ffffff;
-  border: 1px solid #000;
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-/* Simple footer at the bottom of the page */
-
+/* footer */
 .site-footer {
   background: #000000;
   color: #ffffff;
@@ -184,66 +75,7 @@ across the screen */
   padding: 16px;
 }
 
-/* Tablet breakpoint (600px and up).
-Here I change the navigation layout and add columns to the grid */
-
-@media (min-width: 600px) {
-
-  .nav-bar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .site-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr 1.2fr;
-  }
-
-  .work-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-/* Desktop breakpoint (900px and up).
-This makes the layout wider and adds more columns to the work grid */
-
-@media (min-width: 900px) {
-
-  .about-grid {
-    grid-template-columns: 1fr 1.4fr;
-    gap: 50px;
-  }
-
-  .work-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-}
-
-/* Large desktop breakpoint (1200px and up).
-I add more padding so the layout has more breathing room */
-
-@media (min-width: 1200px) {
-
-  .container {
-    padding: 32px;
-  }
-
-}
-
-/* =========================================
- GALLERY PAGE ONLY
- I used separate class names so this page
- does not change my other pages.
-========================================= */
-
+/* gallery */
 .gallery-hero-section {
   background: #ffffff;
   padding-top: 40px;
@@ -276,8 +108,6 @@ I add more padding so the layout has more breathing room */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-  /* I put transition on the normal state so it stays smooth */
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -300,11 +130,7 @@ I add more padding so the layout has more breathing room */
   font-weight: 500;
 }
 
-/* =========================================
- ANIMATION SECTION
- I only used simple gallery animations here.
-========================================= */
-
+/* animation */
 @keyframes galleryFadeUp {
   from {
     opacity: 0;
@@ -338,9 +164,20 @@ I add more padding so the layout has more breathing room */
   transform: translateY(0);
 }
 
-/* gallery responsive layout only */
-
+/* responsive */
 @media (min-width: 600px) {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -352,22 +189,183 @@ I add more padding so the layout has more breathing room */
   }
 }
 
-/* required reduced motion support */
-
+/* reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .gallery-load-in,
   .gallery-load-delay {
     animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
   }
 
   .gallery-card,
   .gallery-reveal {
-    transition-duration: 0.01ms !important;
+    transition: none;
   }
 
   .gallery-reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* =========================================
+ VIEW PROJECT BUTTON 
+========================================= */
+
+.gallery-open-btn {
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+
+  padding: 10px 16px;
+
+  background: #111;
+  color: #fff;
+
+  border: none;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery-open-btn:hover,
+.gallery-open-btn:focus-visible {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+/* =========================================
+ MODAL
+========================================= */
+
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2000;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.gallery-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.gallery-modal-content img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.about-section {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.about-section h1 {
+  margin-bottom: 30px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-text h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.work-section {
+  margin-bottom: 40px;
+}
+
+.work-section h2 {
+  margin-bottom: 20px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.work-card img {
+  width: 100%;
+}
+
+.work-card p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 50px;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
