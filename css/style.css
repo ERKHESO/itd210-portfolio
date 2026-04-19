@@ -237,3 +237,137 @@ I add more padding so the layout has more breathing room */
   }
 
 }
+
+/* =========================================
+ GALLERY PAGE ONLY
+ I used separate class names so this page
+ does not change my other pages.
+========================================= */
+
+.gallery-hero-section {
+  background: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.gallery-hero-section h1 {
+  margin-bottom: 10px;
+}
+
+.gallery-hero-section p {
+  margin: 0;
+  max-width: 700px;
+  font-weight: 500;
+}
+
+.gallery-showcase-section {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.gallery-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* I put transition on the normal state so it stays smooth */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-card h2 {
+  margin: 16px 16px 8px;
+}
+
+.gallery-card p {
+  margin: 0 16px 20px;
+  font-weight: 500;
+}
+
+/* =========================================
+ ANIMATION SECTION
+ I only used simple gallery animations here.
+========================================= */
+
+@keyframes galleryFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-load-in {
+  opacity: 0;
+  animation: galleryFadeUp 0.8s ease forwards;
+}
+
+.gallery-load-delay {
+  opacity: 0;
+  animation: galleryFadeUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.gallery-reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.gallery-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* gallery responsive layout only */
+
+@media (min-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* required reduced motion support */
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-load-in,
+  .gallery-load-delay {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .gallery-card,
+  .gallery-reveal {
+    transition-duration: 0.01ms !important;
+  }
+
+  .gallery-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
