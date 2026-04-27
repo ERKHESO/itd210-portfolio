@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- =========================================
-   HEAD SECTION
-  ========================================= -->
+  <!-- This sets up the page and connects my CSS file and fonts. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Media | Erkhes Portfolio</title>
 
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- This loads the same fonts used on my other pages so design stays consistent -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poiret+One&family=Roboto&display=swap" rel="stylesheet">
@@ -17,9 +16,7 @@
 
 <body>
 
-  <!-- =========================================
-   HEADER
-  ========================================= -->
+  <!-- This is my website header and navigation. -->
   <header class="site-header">
     <div class="container nav-bar">
       <div class="site-title">Erkhes Portfolio</div>
@@ -34,84 +31,115 @@
     </div>
   </header>
 
-  <!-- =========================================
-   MAIN CONTENT
-  ========================================= -->
-  <main class="container">
+  <!-- This is the main content for my media page. -->
+  <main class="container media-page">
 
-    <!-- title -->
-    <section style="padding-top: 40px;">
+    <!-- This section introduces the media page. -->
+    <section class="media-intro">
       <h1>Media</h1>
-      <p>This page loads quotes from an API when the button is clicked.</p>
+      <p>
+        This page features a visualizer I created for Desant’s song “Uildverlegdsen Hun,”
+        a remake of his original track from 20 years ago.      </p>
     </section>
 
-    <!-- button -->
-    <section style="padding-top: 20px;">
-      <button id="loadBtn">Load Quotes</button>
-
-      <p id="loadingMessage" style="display:none;">Loading...</p>
-      <p id="errorMessage" style="color:red;"></p>
+    <!-- These buttons let the user switch between media sections. -->
+    <section class="media-buttons">
+      <button onclick="showSection('videoSection')">Video</button>
+      <button onclick="showSection('audioSection')">Audio</button>
+      <button onclick="showSection('storySection')">Story</button>
     </section>
 
-    <!-- results -->
-    <section style="padding-top: 20px; padding-bottom: 40px;">
-      <div id="dataContainer"></div>
+    <!-- This section shows my portfolio video with controls and captions. -->
+    <section id="videoSection" class="media-section">
+      <h2>Sample Video from Portfolio</h2>
+
+      <video id="myVideo" controls poster="assets/desant-thumbnail.png">
+        <source src="assets/video-1.mp4" type="video/mp4">
+        <track src="assets/captions.vtt" kind="captions" srclang="mn" label="Mongolian">
+        Your browser does not support this video.
+      </video>
+
+      <p>
+        Role: Visualizer Designer<br>
+        Tools: After Effects / Premiere Pro<br>
+        Focus: Motion, color, and rhythm matching the music
+      </p>
+
+      <!-- This button gives the user another way to play or pause the video. -->
+      <button onclick="playPauseVideo()">Play / Pause Video</button>
+
+      <h3>Video Summary</h3>
+      <p>
+        This video is a visualizer I created for Desant’s song “Uildverlegdsen Hun.”
+  The original song was made about 20 years ago, and this is a remade version.
+  I worked on the visual design and animation to match the mood of the music
+  and give the song a modern look.
+      </p>
+    </section>
+
+    <!-- This section shows my audio clip and transcript. -->
+    <section id="audioSection" class="media-section hidden">
+      <h2>Portfolio Audio</h2>
+
+      <audio controls>
+        <source src="assets/music.mp3" type="audio/mpeg">
+        Your browser does not support this audio.
+      </audio>
+
+      <h3>Audio Transcript</h3>
+      <p>
+        This audio is from the remade version of “Uildverlegdsen Hun” by Desant.
+        The song keeps its original meaning but is updated with a new sound.
+        My goal was to support this with a visualizer that feels emotional and modern.
+      </p>
+    </section>
+
+    <!-- This section uses simple animated cards to tell my project story. -->
+    <section id="storySection" class="media-section hidden">
+      <h2>Project Story</h2>
+
+      <div class="story-card">
+        <h3>Concept</h3>
+        <p>I created a visualizer for Desant’s “Uildverlegdsen Hun,” a remake of a song originally released 20 years ago.</p>
+      </div>
+
+      <div class="story-card">
+        <h3>Design</h3>
+        <p>I focused on motion, color, and rhythm to match the emotion of the music and give it a modern visual style.</p>
+      </div>
+
+      <div class="story-card">
+        <h3>Impact</h3>
+        <p>This project helped me improve my visual storytelling and motion design skills, and showed how I can bring music to life through design.</p>
+      </div>
     </section>
 
   </main>
 
-  <!-- =========================================
-   FOOTER
-  ========================================= -->
+  <!-- This is my footer. -->
   <footer class="site-footer">
     <p>&copy; Erkhes Otgontsetseg 2026</p>
   </footer>
 
-  <!-- =========================================
-   SCRIPT (API)
-  ========================================= -->
+  <!-- This JavaScript makes the section buttons and video button work. -->
   <script>
-    async function loadData() {
-      const loadingMessage = document.getElementById("loadingMessage");
-      const errorMessage = document.getElementById("errorMessage");
-      const dataContainer = document.getElementById("dataContainer");
+    function showSection(sectionId) {
+      document.getElementById("videoSection").classList.add("hidden");
+      document.getElementById("audioSection").classList.add("hidden");
+      document.getElementById("storySection").classList.add("hidden");
 
-      loadingMessage.style.display = "block";
-      errorMessage.textContent = "";
-      dataContainer.innerHTML = "";
-
-      try {
-        const response = await fetch("https://dummyjson.com/quotes?limit=5");
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch");
-        }
-
-        const data = await response.json();
-
-        data.quotes.forEach(function(q) {
-          const item = document.createElement("div");
-
-          const quote = document.createElement("p");
-          quote.textContent = '"' + q.quote + '"';
-
-          const author = document.createElement("strong");
-          author.textContent = "- " + q.author;
-
-          item.appendChild(quote);
-          item.appendChild(author);
-
-          dataContainer.appendChild(item);
-        });
-
-      } catch (error) {
-        errorMessage.textContent = "Something went wrong. Please try again.";
-      } finally {
-        loadingMessage.style.display = "none";
-      }
+      document.getElementById(sectionId).classList.remove("hidden");
     }
 
-    document.getElementById("loadBtn").addEventListener("click", loadData);
+    function playPauseVideo() {
+      const video = document.getElementById("myVideo");
+
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
   </script>
 
 </body>

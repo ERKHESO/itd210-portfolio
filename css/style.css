@@ -369,3 +369,125 @@ a:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ===============================
+   MEDIA PAGE STYLES
+   =============================== */
+
+/* This adds spacing to the page */
+.media-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* This centers the intro text */
+.media-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* This styles the top buttons */
+.media-buttons {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* This styles ALL buttons and makes them black */
+.media-buttons button,
+.media-section button {
+  padding: 10px 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background-color: black; 
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* This adds hover effect to buttons */
+.media-buttons button:hover,
+.media-section button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* This shows outline when user tabs */
+button:focus,
+a:focus {
+  outline: 3px solid #aaa;
+  outline-offset: 3px;
+}
+
+/* This hides sections until clicked */
+.hidden {
+  display: none;
+}
+
+/* This styles each media section like a card */
+.media-section {
+  text-align: center; /* centers everything inside */
+  background-color: #f5f5f5;
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+/* This makes video centered and responsive */
+video {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+/* This centers the video button */
+.media-section button {
+  display: block;
+  margin: 15px auto;
+}
+
+/* This makes audio full width */
+audio {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* This styles the story cards */
+.story-card {
+  background: white;
+  padding: 15px;
+  margin: 15px auto;
+  border-radius: 12px;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+/* This adds hover animation */
+.story-card:hover {
+  transform: scale(1.03);
+}
+
+/* This adds simple fade animation */
+.media-intro {
+  animation: fadeIn 1s ease;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* This disables animation for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
