@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- This sets up the page and connects my CSS file and fonts. -->
+  <!-- This head section connects my fonts, CSS file, and responsive settings. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Media | Erkhes Portfolio</title>
 
+  <!-- This links my main CSS stylesheet to the page. -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- This loads the same fonts used on my other pages so design stays consistent -->
+  <!-- These Google Fonts keep the typography consistent across the site. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poiret+One&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- This is my website header and navigation. -->
+  <!-- This header stays the same across all pages so the website feels consistent. -->
   <header class="site-header">
-    <div class="container nav-bar">
-      <div class="site-title">Erkhes Portfolio</div>
 
+    <div class="container nav-bar">
+
+      <!-- This is the portfolio title shown in the navigation area. -->
+      <div class="site-title">
+        Erkhes Portfolio
+      </div>
+
+      <!-- These navigation links help users move through the portfolio pages. -->
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -28,118 +36,197 @@
         <a href="media.html" aria-current="page">Media</a>
         <a href="contact.html">Contact</a>
       </nav>
+
     </div>
+
   </header>
 
-  <!-- This is the main content for my media page. -->
+  <!-- This main section contains all media content for the portfolio page. -->
   <main class="container media-page">
 
-    <!-- This section introduces the media page. -->
+    <!-- This intro section explains the purpose of the media page and project. -->
     <section class="media-intro">
+
       <h1>Media</h1>
+
       <p>
-        This page features a visualizer I created for Desant’s song “Uildverlegdsen Hun,”
-        a remake of his original track from 20 years ago.      </p>
+        This page features a visualizer I created for Desant’s song
+        “Uildverlegdsen Hun,” which is a remake of his original track from 20 years ago.
+      </p>
+
     </section>
 
-    <!-- These buttons let the user switch between media sections. -->
+    <!-- These buttons allow users to switch between the different media sections. -->
     <section class="media-buttons">
-      <button onclick="showSection('videoSection')">Video</button>
-      <button onclick="showSection('audioSection')">Audio</button>
-      <button onclick="showSection('storySection')">Story</button>
+
+      <button onclick="showSection('videoSection')">
+        Video
+      </button>
+
+      <button onclick="showSection('audioSection')">
+        Audio
+      </button>
+
+      <button onclick="showSection('storySection')">
+        Story
+      </button>
+
     </section>
 
-    <!-- This section shows my portfolio video with controls and captions. -->
+    <!-- This section displays my video project with captions and playback controls. -->
     <section id="videoSection" class="media-section">
+
       <h2>Sample Video from Portfolio</h2>
 
+      <!-- This video element includes controls, a poster image, and caption support. -->
       <video id="myVideo" controls poster="assets/desant-thumbnail.png">
+
         <source src="assets/video-1.mp4" type="video/mp4">
-        <track src="assets/captions.vtt" kind="captions" srclang="mn" label="Mongolian">
+
+        <track
+          src="assets/captions.vtt"
+          kind="captions"
+          srclang="mn"
+          label="Mongolian">
+
         Your browser does not support this video.
+
       </video>
 
+      <!-- This paragraph explains my role and creative focus for the project. -->
       <p>
         Role: Visualizer Designer<br>
         Tools: After Effects / Premiere Pro<br>
         Focus: Motion, color, and rhythm matching the music
       </p>
 
-      <!-- This button gives the user another way to play or pause the video. -->
-      <button onclick="playPauseVideo()">Play / Pause Video</button>
+      <!-- This button gives users another way to play or pause the video. -->
+      <button onclick="playPauseVideo()">
+        Play / Pause Video
+      </button>
 
+      <!-- This section summarizes the purpose of the visualizer project. -->
       <h3>Video Summary</h3>
+
       <p>
-        This video is a visualizer I created for Desant’s song “Uildverlegdsen Hun.”
-  The original song was made about 20 years ago, and this is a remade version.
-  I worked on the visual design and animation to match the mood of the music
-  and give the song a modern look.
+        This video is a visualizer I created for Desant’s song
+        “Uildverlegdsen Hun.” The original song was created around
+        20 years ago, and this version is a modern remake.
+        I designed the animation and visual direction to match
+        the mood and energy of the music.
       </p>
+
     </section>
 
-    <!-- This section shows my audio clip and transcript. -->
+    <!-- This section contains the audio clip and transcript. -->
     <section id="audioSection" class="media-section hidden">
+
       <h2>Portfolio Audio</h2>
 
+      <!-- This audio player lets visitors listen to the music clip. -->
       <audio controls>
+
         <source src="assets/music.mp3" type="audio/mpeg">
+
         Your browser does not support this audio.
+
       </audio>
 
+      <!-- This transcript helps explain the audio content and improves accessibility. -->
       <h3>Audio Transcript</h3>
+
       <p>
-        This audio is from the remade version of “Uildverlegdsen Hun” by Desant.
-        The song keeps its original meaning but is updated with a new sound.
-        My goal was to support this with a visualizer that feels emotional and modern.
+        This audio comes from the remade version of
+        “Uildverlegdsen Hun” by Desant.
+        The song keeps its original meaning while introducing
+        a more modern sound and production style.
       </p>
+
     </section>
 
-    <!-- This section uses simple animated cards to tell my project story. -->
+    <!-- This section uses animated story cards to explain the project process. -->
     <section id="storySection" class="media-section hidden">
+
       <h2>Project Story</h2>
 
+      <!-- This card explains the project concept. -->
       <div class="story-card">
+
         <h3>Concept</h3>
-        <p>I created a visualizer for Desant’s “Uildverlegdsen Hun,” a remake of a song originally released 20 years ago.</p>
+
+        <p>
+          I created a visualizer for Desant’s “Uildverlegdsen Hun,”
+          a remake of a song originally released around 20 years ago.
+        </p>
+
       </div>
 
+      <!-- This card explains the visual design direction. -->
       <div class="story-card">
+
         <h3>Design</h3>
-        <p>I focused on motion, color, and rhythm to match the emotion of the music and give it a modern visual style.</p>
+
+        <p>
+          I focused on motion, color, and rhythm to match the emotion
+          of the music and create a modern visual style.
+        </p>
+
       </div>
 
+      <!-- This card explains the impact of the project on my skills. -->
       <div class="story-card">
+
         <h3>Impact</h3>
-        <p>This project helped me improve my visual storytelling and motion design skills, and showed how I can bring music to life through design.</p>
+
+        <p>
+          This project helped me improve my motion graphics
+          and visual storytelling skills while learning how
+          music and visuals can work together.
+        </p>
+
       </div>
+
     </section>
 
   </main>
 
-  <!-- This is my footer. -->
+  <!-- This footer stays consistent with the rest of the website. -->
   <footer class="site-footer">
     <p>&copy; Erkhes Otgontsetseg 2026</p>
   </footer>
 
-  <!-- This JavaScript makes the section buttons and video button work. -->
+  <!-- This JavaScript controls the section switching and video interaction.
+       I also used ChatGPT to help understand and organize some of the JavaScript logic. -->
   <script>
+
+    // This function hides all media sections and only shows the selected one.
     function showSection(sectionId) {
+
       document.getElementById("videoSection").classList.add("hidden");
       document.getElementById("audioSection").classList.add("hidden");
       document.getElementById("storySection").classList.add("hidden");
 
       document.getElementById(sectionId).classList.remove("hidden");
+
     }
 
+    // This function plays or pauses the video when the button is clicked.
     function playPauseVideo() {
+
       const video = document.getElementById("myVideo");
 
       if (video.paused) {
+
         video.play();
+
       } else {
+
         video.pause();
+
       }
+
     }
+
   </script>
 
 </body>

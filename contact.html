@@ -1,90 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- This head section connects my fonts, CSS file, and responsive settings. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Erkhes Portfolio</title>
+
+  <!-- This links my main CSS stylesheet to the page. -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- These Google Fonts keep the typography consistent across the site. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poiret+One&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-gray-50 text-gray-900">
+<body>
 
-  <!-- HEADER -->
-  <header class="bg-white shadow-sm">
-    <nav class="max-w-6xl mx-auto px-6 flex justify-between items-center py-4">
+  <!-- This header stays the same on every page for consistent navigation. -->
+  <header class="site-header">
 
-      <div class="text-xl font-semibold">
+    <div class="container nav-bar">
+
+      <!-- This is the site title shown in the navigation area. -->
+      <div class="site-title">
         Erkhes Portfolio
       </div>
 
-      <div class="flex gap-6 text-sm text-gray-600">
-        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-        <a href="about.html" class="hover:text-blue-600 transition">About</a>
-        <a href="gallery.html" class="hover:text-blue-600 transition">Gallery</a>
-        <a href="media.html" class="hover:text-blue-600 transition">Media</a>
-        <a href="contact.html" class="text-blue-600">Contact</a>
-      </div>
+      <!-- These navigation links help users move through the portfolio pages. -->
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
 
-    </nav>
+    </div>
+
   </header>
 
-  <!-- MAIN -->
-  <main class="max-w-6xl mx-auto px-6 py-16">
+  <!-- This main section contains the full contact page content. -->
+  <main class="container contact-page">
 
-    <!-- TITLE -->
-    <section class="mb-12">
-      <h1 class="text-4xl font-bold mb-4">Contact</h1>
-      <p class="text-gray-500 max-w-xl">
-        If you’d like to connect or ask about my work, feel free to send a message.
+    <!-- This intro section explains how visitors can contact me. -->
+    <section class="contact-intro">
+
+      <h1>Contact</h1>
+
+      <p>
+        If you want to connect, ask about my work, or talk about a creative project,
+        you can send me a message below.
       </p>
+
     </section>
 
-    <!-- CONTENT -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- This layout separates my contact details and the contact form into two sections. -->
+    <section class="contact-layout">
 
-      <!-- LEFT -->
-      <div>
-        <h2 class="text-2xl font-semibold mb-4">Contact Info</h2>
+      <!-- This section gives visitors basic information about me and my design focus. -->
+      <div class="contact-box">
 
-        <p class="text-gray-600 mb-4">
-          Graphic design and web development student creating clean and modern digital work.
+        <h2>Contact Info</h2>
+
+        <p>
+          I am a graphic design and web development student focused on clean,
+          modern, and meaningful digital work.
         </p>
 
-        <p class="text-gray-600"><strong>Email:</strong> Erkeenee@yahoo.com</p>
-        <p class="text-gray-600"><strong>Location:</strong> Northern Virginia</p>
+        <p><strong>Email:</strong> Erkeenee@yahoo.com</p>
+        <p><strong>Location:</strong> Northern Virginia</p>
+        <p><strong>Focus:</strong> Branding, Web Design, and Visual Design</p>
+
+        <!-- This FAQ button adds extra interaction to the contact page. -->
+        <button
+          class="contact-faq-btn"
+          id="contactFaqBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="contactFaqAnswer">
+
+          What can I help with?
+
+        </button>
+
+        <!-- This answer appears when the FAQ section is opened. -->
+        <p class="contact-faq-answer" id="contactFaqAnswer">
+          I can help with portfolio websites, branding ideas, social media graphics,
+          visual layouts, and creative feedback.
+        </p>
+
       </div>
 
-      <!-- RIGHT -->
-      <div>
-        <h2 class="text-2xl font-semibold mb-4">Send Message</h2>
+      <!-- This section contains the contact form visitors can use to send a message. -->
+      <div class="contact-box">
 
-        <form class="flex flex-col gap-4">
+        <h2>Send Message</h2>
 
-          <input type="text" placeholder="Your name"
-            class="px-4 py-2 border border-gray-300 rounded">
+        <!-- This status message updates after form validation. -->
+        <p id="contactFormStatus" aria-live="polite"></p>
 
-          <input type="email" placeholder="Your email"
-            class="px-4 py-2 border border-gray-300 rounded">
+        <!-- This form uses Formspree for submissions and JavaScript for validation. -->
+        <form
+          id="contactForm"
+          class="contact-form"
+          action="https://formspree.io/f/meenkano"
+          method="POST"
+          novalidate>
 
-          <textarea rows="4" placeholder="Your message"
-            class="px-4 py-2 border border-gray-300 rounded"></textarea>
+          <!-- This field collects the visitor's name. -->
+          <label for="contactName">Name</label>
 
-          <button
-            class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+          <input
+            id="contactName"
+            name="name"
+            type="text"
+            placeholder="Your name"
+            required
+            aria-describedby="contactNameError">
+
+          <p class="contact-error" id="contactNameError"></p>
+
+          <!-- This field collects the visitor's email. -->
+          <label for="contactEmail">Email</label>
+
+          <input
+            id="contactEmail"
+            name="email"
+            type="email"
+            placeholder="Your email"
+            required
+            aria-describedby="contactEmailError">
+
+          <p class="contact-error" id="contactEmailError"></p>
+
+          <!-- This field helps organize the message topic. -->
+          <label for="contactSubject">Subject</label>
+
+          <input
+            id="contactSubject"
+            name="subject"
+            type="text"
+            placeholder="Message subject"
+            required
+            aria-describedby="contactSubjectError">
+
+          <p class="contact-error" id="contactSubjectError"></p>
+
+          <!-- This field lets the visitor write the full message. -->
+          <label for="contactMessage">Message</label>
+
+          <textarea
+            id="contactMessage"
+            name="message"
+            rows="5"
+            placeholder="Write your message here..."
+            required
+            aria-describedby="contactMessageHelp contactMessageError"></textarea>
+
+          <!-- This helper section shows the minimum length and live character count. -->
+          <div class="contact-help" id="contactMessageHelp">
+
+            <span>Minimum 20 characters</span>
+
+            <span>
+              <span id="contactCharCount">0</span> characters
+            </span>
+
+          </div>
+
+          <p class="contact-error" id="contactMessageError"></p>
+
+          <!-- This button submits the form after validation passes. -->
+          <button type="submit">
             Send Message
           </button>
 
         </form>
+
+        <!-- This success message appears after the form is validated successfully. -->
+        <div class="contact-success" id="contactSuccessMessage">
+          Thank you! Your message is ready to send.
+        </div>
+
       </div>
 
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 text-center py-6">
+  <!-- This footer stays consistent with the rest of the website. -->
+  <footer class="site-footer">
     <p>&copy; Erkhes Otgontsetseg 2026</p>
   </footer>
+
+  <!-- This JavaScript controls the validation, character counter, and FAQ interaction.
+       I also used ChatGPT to help understand and organize some of the JavaScript validation logic. -->
+
+  <script>
+
+    // This selects the form and all form fields.
+    const contactForm = document.getElementById("contactForm");
+    const contactName = document.getElementById("contactName");
+    const contactEmail = document.getElementById("contactEmail");
+    const contactSubject = document.getElementById("contactSubject");
+    const contactMessage = document.getElementById("contactMessage");
+
+    // These select the inline error message areas.
+    const contactNameError = document.getElementById("contactNameError");
+    const contactEmailError = document.getElementById("contactEmailError");
+    const contactSubjectError = document.getElementById("contactSubjectError");
+    const contactMessageError = document.getElementById("contactMessageError");
+
+    // These select the status message, success message, and character counter.
+    const contactFormStatus = document.getElementById("contactFormStatus");
+    const contactSuccessMessage = document.getElementById("contactSuccessMessage");
+    const contactCharCount = document.getElementById("contactCharCount");
+
+    // This updates the character counter while the user types.
+    contactMessage.addEventListener("input", function () {
+      contactCharCount.textContent = contactMessage.value.length;
+    });
+
+    // These select the FAQ button and answer section.
+    const contactFaqBtn = document.getElementById("contactFaqBtn");
+    const contactFaqAnswer = document.getElementById("contactFaqAnswer");
+
+    // This opens and closes the FAQ section.
+    contactFaqBtn.addEventListener("click", function () {
+
+      contactFaqAnswer.classList.toggle("contact-show");
+
+      const isOpen = contactFaqAnswer.classList.contains("contact-show");
+
+      contactFaqBtn.setAttribute("aria-expanded", isOpen);
+
+    });
+
+    // This checks if the email format is valid.
+    function contactIsValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // This validates the form before submission.
+    contactForm.addEventListener("submit", function (event) {
+
+      let contactValid = true;
+
+      // This clears old error messages before checking again.
+      contactNameError.textContent = "";
+      contactEmailError.textContent = "";
+      contactSubjectError.textContent = "";
+      contactMessageError.textContent = "";
+      contactFormStatus.textContent = "";
+      contactSuccessMessage.classList.remove("contact-show");
+
+      // This checks if the name field is empty.
+      if (contactName.value.trim() === "") {
+        contactNameError.textContent = "Please enter your name.";
+        contactValid = false;
+      }
+
+      // This checks if the email field is valid.
+      if (contactEmail.value.trim() === "") {
+
+        contactEmailError.textContent = "Please enter your email.";
+        contactValid = false;
+
+      } else if (!contactIsValidEmail(contactEmail.value.trim())) {
+
+        contactEmailError.textContent = "Please enter a valid email address.";
+        contactValid = false;
+
+      }
+
+      // This checks if the subject field is empty.
+      if (contactSubject.value.trim() === "") {
+        contactSubjectError.textContent = "Please enter a subject.";
+        contactValid = false;
+      }
+
+      // This checks if the message is long enough.
+      if (contactMessage.value.trim().length < 20) {
+
+        contactMessageError.textContent = "Please write at least 20 characters.";
+        contactValid = false;
+
+      }
+
+      // This stops submission if there are validation errors.
+      if (!contactValid) {
+
+        event.preventDefault();
+
+        contactFormStatus.textContent = "Please fix the errors below.";
+
+      } else {
+
+        contactSuccessMessage.classList.add("contact-show");
+
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>

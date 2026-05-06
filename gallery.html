@@ -1,268 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- =========================================
-   HEAD SECTION
-  ========================================= -->
+
+  <!-- This head section connects my fonts, CSS file, and responsive settings. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Gallery | Erkhes Portfolio</title>
+
+  <!-- This links my main CSS stylesheet to the page. -->
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- These Google Fonts keep the typography consistent across the site. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poiret+One&family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="gallery-page">
 
-  <!-- =========================================
-   HEADER
-  ========================================= -->
+  <!-- This header stays the same across all pages so the website feels consistent. -->
   <header class="site-header">
-    <div class="container nav-bar">
-      <div class="site-title">Erkhes Portfolio</div>
 
+    <div class="container nav-bar">
+
+      <!-- This is the portfolio title shown in the navigation area. -->
+      <div class="site-title">
+        Erkhes Portfolio
+      </div>
+
+      <!-- These navigation links help users move through the portfolio pages. -->
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
         <a href="media.html">Media</a>
         <a href="contact.html">Contact</a>
       </nav>
+
     </div>
+
   </header>
 
-  <!-- =========================================
-   HERO
-  ========================================= -->
+  <!-- This hero section introduces the gallery page and explains the purpose of the projects. -->
   <section class="gallery-hero-section">
+
     <div class="container">
-      <h1 class="gallery-load-in">Gallery</h1>
+
+      <h1 class="gallery-load-in">
+        Gallery
+      </h1>
+
       <p class="gallery-load-delay">
-        This page showcases some of my projects and creative work.
+        This page showcases selected creative projects including cover art,
+        motion graphics, and visual design work.
       </p>
+
     </div>
+
   </section>
 
-  <!-- =========================================
-   GALLERY GRID
-  ========================================= -->
+  <!-- This main section contains the full gallery layout and project cards. -->
   <main class="container">
+
     <section class="gallery-showcase-section">
+
+      <!-- This grid organizes all project cards into a responsive layout. -->
       <div class="gallery-grid">
 
-        <!-- CARD 1 -->
+        <!-- This card displays a custom cover art and lettering project. -->
         <article class="gallery-card gallery-reveal" data-category="cover">
-          <img src="assets/work1.png" alt="Cover art design for SHOHH and Gr8khan Hairymu" loading="lazy">
+
+          <img
+            src="assets/work1.png"
+            alt="Cover art design for SHOHH and Gr8khan Hairymu"
+            loading="lazy">
+
           <h2>SHOHH &amp; Gr8khan - Hairymu</h2>
+
           <p>Lettering + Cover Art</p>
-          <button class="gallery-open-btn"
+
+          <!-- This button opens a larger modal preview of the project. -->
+          <button
+            class="gallery-open-btn"
             data-image="assets/work1.png"
             data-title="Hairymu"
             data-text="Custom lettering and cover art design."
             data-alt="Cover art design for SHOHH and Gr8khan Hairymu">
+
             View Project
+
           </button>
+
         </article>
 
-        <!-- CARD 2 -->
+        <!-- This card displays music cover artwork for another project. -->
         <article class="gallery-card gallery-reveal" data-category="cover">
-          <img src="assets/work2.png" alt="Cover art for Mekh Zakhq and BX Best" loading="lazy">
+
+          <img
+            src="assets/work2.png"
+            alt="Cover art for Mekh Zakhq and BX Best"
+            loading="lazy">
+
           <h2>Mekh Zakhq &amp; BX - Best</h2>
+
           <p>Cover Art</p>
-          <button class="gallery-open-btn"
+
+          <button
+            class="gallery-open-btn"
             data-image="assets/work2.png"
             data-title="Best"
             data-text="Music cover artwork design."
             data-alt="Cover art for Mekh Zakhq and BX Best">
+
             View Project
+
           </button>
+
         </article>
 
-        <!-- CARD 3 -->
+        <!-- This card displays an album cover project. -->
         <article class="gallery-card gallery-reveal" data-category="cover">
-          <img src="assets/work3.png" alt="Lil Thuge album cover design" loading="lazy">
+
+          <img
+            src="assets/work3.png"
+            alt="Lil Thuge album cover design"
+            loading="lazy">
+
           <h2>Lil Thuge Album Cover</h2>
+
           <p>Album Cover Design</p>
-          <button class="gallery-open-btn"
+
+          <button
+            class="gallery-open-btn"
             data-image="assets/work3.png"
             data-title="Lil Thuge"
             data-text="Album cover with cinematic style."
             data-alt="Lil Thuge album cover design">
+
             View Project
+
           </button>
+
         </article>
 
-        <!-- CARD 4 -->
+        <!-- This card displays a lyrics video and cover art project. -->
         <article class="gallery-card gallery-reveal" data-category="video">
-          <img src="assets/work4.png" alt="Lyrics video and cover art for Desant" loading="lazy">
+
+          <img
+            src="assets/work4.png"
+            alt="Lyrics video and cover art for Desant"
+            loading="lazy">
+
           <h2>Desant - Uildverlegdsen Hun</h2>
+
           <p>Lyrics Video + Cover Art</p>
-          <button class="gallery-open-btn"
+
+          <button
+            class="gallery-open-btn"
             data-image="assets/work4.png"
             data-title="Desant"
             data-text="Lyrics video visuals and cover design."
             data-alt="Lyrics video and cover art for Desant">
+
             View Project
+
           </button>
+
         </article>
 
-        <!-- CARD 5 -->
+        <!-- This card displays an illustration and animation project. -->
         <article class="gallery-card gallery-reveal" data-category="illustration">
-          <img src="assets/work5.png" alt="Illustration and animation for Arry Daydream" loading="lazy">
+
+          <img
+            src="assets/work5.png"
+            alt="Illustration and animation for Arry Daydream"
+            loading="lazy">
+
           <h2>Arry - Daydream</h2>
+
           <p>Animation + Illustration</p>
-          <button class="gallery-open-btn"
+
+          <button
+            class="gallery-open-btn"
             data-image="assets/work5.png"
             data-title="Daydream"
             data-text="Illustrated animated project."
             data-alt="Illustration and animation for Arry Daydream">
+
             View Project
+
           </button>
+
         </article>
 
-        <!-- CARD 6 -->
+        <!-- This card displays another music cover art project. -->
         <article class="gallery-card gallery-reveal" data-category="cover">
-          <img src="assets/work6.png" alt="Cover art for Bhiisma Say My Name" loading="lazy">
+
+          <img
+            src="assets/work6.png"
+            alt="Cover art for Bhiisma Say My Name"
+            loading="lazy">
+
           <h2>Bhiisma - Say My Name</h2>
+
           <p>Cover Art</p>
-          <button class="gallery-open-btn"
+
+          <button
+            class="gallery-open-btn"
             data-image="assets/work6.png"
             data-title="Say My Name"
             data-text="High contrast cover art."
             data-alt="Cover art for Bhiisma Say My Name">
+
             View Project
+
           </button>
+
         </article>
 
-        <!-- CARD 7 -->
+        <!-- This card displays another original cover artwork project. -->
         <article class="gallery-card gallery-reveal" data-category="cover">
-          <img src="assets/work7.png" alt="Original project seven cover art design" loading="lazy">
-          <h2>Siente &amp; Ahuna - Gehdee Zugeer&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h2>
+
+          <img
+            src="assets/work7.png"
+            alt="Original project seven cover art design"
+            loading="lazy">
+
+          <h2>Siente &amp; Ahuna - Gehdee Zugeer</h2>
+
           <p>Cover Art</p>
-          <button class="gallery-open-btn"
+
+          <button
+            class="gallery-open-btn"
             data-image="assets/work7.png"
             data-title="Project Seven"
-            data-text="Add your real description."
+            data-text="Original cover art design project."
             data-alt="Original project seven cover art design">
+
             View Project
+
           </button>
+
         </article>
 
-        <!-- CARD 8 -->
+        <!-- This card displays another album cover project. -->
         <article class="gallery-card gallery-reveal" data-category="video">
-          <img src="assets/work8.png" alt="Original project eight video design work" loading="lazy">
-          <h2>King Cheech - Synthesize Album Cover&nbsp;</h2>
-          <p>Album Cover&nbsp;&nbsp;</p>
-          <button class="gallery-open-btn"
+
+          <img
+            src="assets/work8.png"
+            alt="Original project eight video design work"
+            loading="lazy">
+
+          <h2>King Cheech - Synthesize Album Cover</h2>
+
+          <p>Album Cover</p>
+
+          <button
+            class="gallery-open-btn"
             data-image="assets/work8.png"
             data-title="Project Eight"
-            data-text="Add your real description."
+            data-text="Album cover artwork project."
             data-alt="Original project eight video design work">
+
             View Project
+
           </button>
+
         </article>
 
-        <!-- CARD 9 -->
+        <!-- This card displays another music cover artwork project. -->
         <article class="gallery-card gallery-reveal" data-category="illustration">
-          <img src="assets/work9.png" alt="Original project nine illustration work" loading="lazy">
-          <h2>Mekh Zakh &amp; Desant - Slanga&nbsp;&nbsp;</h2>
+
+          <img
+            src="assets/work9.png"
+            alt="Original project nine illustration work"
+            loading="lazy">
+
+          <h2>Mekh Zakh &amp; Desant - Slanga</h2>
+
           <p>Cover Art</p>
-          <button class="gallery-open-btn"
+
+          <button
+            class="gallery-open-btn"
             data-image="assets/work9.png"
             data-title="Project Nine"
-            data-text="Add your real description."
+            data-text="Creative cover artwork project."
             data-alt="Original project nine illustration work">
+
             View Project
+
           </button>
+
         </article>
 
       </div>
+
     </section>
+
   </main>
 
-  <!-- =========================================
-   MODAL
-  ========================================= -->
+  <!-- This modal displays larger project previews when buttons are clicked. -->
   <div class="gallery-modal" id="galleryModal">
+
     <div class="gallery-modal-content">
-      <button class="gallery-modal-close">&times;</button>
+
+      <!-- This button closes the modal window. -->
+      <button class="gallery-modal-close">
+        &times;
+      </button>
+
       <img id="modalImage" src="" alt="">
+
       <h2 id="modalTitle"></h2>
+
       <p id="modalText"></p>
+
     </div>
+
   </div>
 
-  <!-- =========================================
-   FOOTER
-  ========================================= -->
+  <!-- This footer stays consistent with the rest of the website. -->
   <footer class="site-footer">
     <p>&copy; Erkhes Otgontsetseg 2026</p>
   </footer>
 
-  <!-- =========================================
-   SCRIPT
-  ========================================= -->
+  <!-- This JavaScript controls animations, filtering, and the modal interaction.
+       I also used ChatGPT to help understand and organize some of the JavaScript logic. -->
   <script>
 
-    /* scroll reveal */
+    // This reveals gallery cards as the user scrolls down the page.
     const reveals = document.querySelectorAll(".gallery-reveal");
+
     window.addEventListener("scroll", () => {
+
       reveals.forEach(el => {
+
         if (el.getBoundingClientRect().top < window.innerHeight - 100) {
           el.classList.add("active");
         }
+
       });
+
     });
 
-    /* filter */
+    // This section controls gallery filtering buttons.
     const buttons = document.querySelectorAll(".filter-btn");
     const cards = document.querySelectorAll(".gallery-card");
 
     buttons.forEach(btn => {
+
       btn.addEventListener("click", () => {
+
         buttons.forEach(b => b.classList.remove("active"));
+
         btn.classList.add("active");
 
         const filter = btn.dataset.filter;
 
         cards.forEach(card => {
+
           if (filter === "all" || card.dataset.category === filter) {
+
             card.style.display = "block";
+
           } else {
+
             card.style.display = "none";
+
           }
+
         });
+
       });
+
     });
 
-    /* modal */
+    // This section controls the modal popup preview.
     const modal = document.getElementById("galleryModal");
     const modalImg = document.getElementById("modalImage");
     const modalTitle = document.getElementById("modalTitle");
     const modalText = document.getElementById("modalText");
 
+    // This opens the modal when a project button is clicked.
     document.querySelectorAll(".gallery-open-btn").forEach(btn => {
+
       btn.addEventListener("click", () => {
+
         modal.classList.add("show");
+
         modalImg.src = btn.dataset.image;
         modalImg.alt = btn.dataset.alt;
+
         modalTitle.textContent = btn.dataset.title;
         modalText.textContent = btn.dataset.text;
+
       });
+
     });
 
+    // This closes the modal using the close button.
     document.querySelector(".gallery-modal-close").onclick = () => {
+
       modal.classList.remove("show");
+
     };
 
+    // This closes the modal when the background is clicked.
     modal.onclick = (e) => {
-      if (e.target === modal) modal.classList.remove("show");
+
+      if (e.target === modal) {
+
+        modal.classList.remove("show");
+
+      }
+
     };
 
+    // This closes the modal when the Escape key is pressed.
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") modal.classList.remove("show");
+
+      if (e.key === "Escape") {
+
+        modal.classList.remove("show");
+
+      }
+
     });
 
   </script>

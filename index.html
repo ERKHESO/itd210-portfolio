@@ -1,102 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- =========================================
-   HEAD SECTION
-   This section sets the character encoding,
-   responsive viewport, page title, stylesheet,
-   and Google Fonts for the homepage.
-  ========================================= -->
+  <!-- This head section sets up the page title, responsive viewport, stylesheet, and fonts. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Erkhes Portfolio</title>
+  <title>Home | Erkhes Portfolio</title>
+
+  <!-- This connects the homepage to my main CSS file. -->
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- These Google Fonts are used throughout my portfolio site. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poiret+One&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- =========================================
-   HEADER SECTION
-   This section creates the top navigation area.
-   Flexbox is used so the site title and links can
-   stack on small screens and line up on larger screens.
-  ========================================= -->
+  <!-- This header stays the same across all pages so the website feels consistent. -->
   <header class="site-header">
-    <div class="container nav-bar">
-      <div class="site-title">Erkhes Portfolio</div>
 
-      <!-- =========================================
-       NAV SECTION
-       This navigation helps users move through the site.
-       It stays simple and clean to match the homepage style.
-      ========================================= -->
+    <div class="container nav-bar">
+
+      <!-- This is the portfolio title shown in the navigation area. -->
+      <div class="site-title">
+        Erkhes Portfolio
+      </div>
+
+      <!-- These navigation links help users move between pages. -->
       <nav class="site-nav">
-        <a href="index.html">Home</a>
+        <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="gallery.html">Gallery</a>
         <a href="media.html">Media</a>
         <a href="contact.html">Contact</a>
       </nav>
+
     </div>
+
   </header>
 
-  <!-- =========================================
-   HERO SECTION
-   This section displays a large hero image at the top
-   of the homepage to create a strong visual first impression.
-  ========================================= -->
-  <section class="hero-section">
-    <div class="container hero-wrap">
-      <img src="assets/hero.png" alt="Hero image showing featured portfolio work" class="hero-image">
-    </div>
-  </section>
-
-  <!-- =========================================
-   MAIN SECTION
-   This is the main content area of the homepage.
-   It includes the featured work section using CSS Grid.
-  ========================================= -->
+  <!-- This main section uses a split layout inspired by Dr. G's Visual Playground reference page. I changed the content, styling, and purpose to fit my own portfolio design. -->
   <main class="container">
 
-    <!-- =========================================
-     WORK SECTION
-     This section highlights featured projects or pieces.
-     CSS Grid is used here so the cards stack on mobile,
-     become 2 columns on tablet, and 4 columns on desktop.
-    ========================================= -->
-    <section class="work-section" id="episodes">
-      <h2>Work</h2>
+    <!-- This split section creates a modern homepage layout with text on one side and an image on the other. -->
+    <section class="split-c">
 
-      <div class="work-grid">
-        <article class="work-card">
-          <img src="assets/work1.png" alt="Preview of featured project one">
-          <p>Lettering + Cover Art</p>
-        </article>
+      <!-- This left side contains the main introduction text for the homepage. -->
+      <div class="split-c-left">
 
-        <article class="work-card">
-          <img src="assets/work2.png" alt="Cover Art">
-          <p>Cover Art</p>
-        </article>
+        <!-- Small intro text -->
+        <span class="split-c-eyebrow">
+          My Portfolio
+        </span>
 
-        <article class="work-card">
-          <img src="assets/work3.png" alt="Album Cover">
-          <p>Album Cover</p>
-        </article>
+        <!-- Main homepage heading -->
+        <h1 class="split-c-h2">
+          Building clean<br>
+          and modern<br>
+          visual work.
+        </h1>
+
+        <!-- This paragraph explains the focus of my portfolio. -->
+        <p class="split-c-p">
+          This portfolio highlights my creative work in branding,
+          digital media, web design, and visual storytelling.
+          Each project reflects my growth as a designer and developer.
+        </p>
+
+        <!-- This button links visitors to the gallery page. -->
+        <a href="gallery.html" class="split-c-btn">
+          View Projects
+        </a>
 
       </div>
+
+      <!-- This right side displays the main hero image for the homepage. -->
+      <div class="split-c-right">
+
+        <img src="assets/hero.png"
+             alt="Portfolio hero image">
+
+      </div>
+
     </section>
 
   </main>
 
-  <!-- =========================================
-   FOOTER SECTION
-   This section closes the homepage and matches
-   the dark footer style from your original layout.
-  ========================================= -->
+  <!-- This footer stays consistent across the full website. -->
   <footer class="site-footer">
     <p>&copy; Erkhes Otgontsetseg 2026</p>
   </footer>
