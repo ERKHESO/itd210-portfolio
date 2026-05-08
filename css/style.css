@@ -721,3 +721,51 @@ audio {
   line-height: 1.7;
   max-width: 600px;
 }
+/* About page scrolling gallery styles */
+
+.about-marquee-section {
+  margin-bottom: 50px;
+}
+
+.about-marquee-section h2 {
+  margin-bottom: 20px;
+}
+
+.about-marquee-track {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 12px 0;
+}
+
+.about-marquee-inner {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: aboutMarqueeScroll 28s linear infinite;
+}
+
+.about-marquee-inner img {
+  height: 220px;
+  width: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes aboutMarqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* This respects accessibility settings if users prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .about-marquee-inner {
+    animation: none;
+  }
+}

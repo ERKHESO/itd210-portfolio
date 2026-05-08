@@ -2,34 +2,34 @@
 <html lang="en">
 
 <head>
-  <!-- This head section connects my fonts, CSS file, and responsive settings. -->
+  <!-- This section sets up the page title, responsive viewport, stylesheet, and fonts -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Erkhes Portfolio</title>
 
-  <!-- This links my main CSS stylesheet to the page. -->
+  <!-- Main CSS file -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- These Google Fonts keep the typography consistent across the site. -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poiret+One&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- This header stays the same across all pages so the website feels consistent. -->
+  <!-- HEADER -->
   <header class="site-header">
 
     <div class="container nav-bar">
 
-      <!-- This is the portfolio title shown in the navigation area. -->
+      <!-- Site title -->
       <div class="site-title">
         Erkhes Portfolio
       </div>
 
-      <!-- These navigation links help users move through the portfolio pages. -->
+      <!-- Navigation links -->
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <a href="about.html" aria-current="page">About</a>
@@ -42,18 +42,18 @@
 
   </header>
 
-  <!-- This main section uses layout inspiration from Dr. G's Visual Playground page. I changed the content and structure to match my own portfolio and creative style. -->
+  <!-- MAIN CONTENT -->
   <main class="container">
 
-    <!-- This intro card creates a different layout from the homepage and introduces who I am. -->
+    <!-- This intro card creates a different layout from the homepage. -->
     <section class="intro-a">
 
-      <!-- This image represents my personal logo and creative identity. -->
+      <!-- Personal image or logo -->
       <img class="intro-a-photo"
            src="assets/logo.png"
            alt="Erkhes personal artist logo">
 
-      <!-- This text introduces my name and role. -->
+      <!-- Name and role -->
       <div class="intro-a-name">
         Erkhes O
       </div>
@@ -62,14 +62,14 @@
         Graphic Design + Web Design Student
       </div>
 
-      <!-- This short bio explains my creative interests and background. -->
+      <!-- Short bio -->
       <p class="intro-a-bio">
         I am a student designer at Northern Virginia Community College focused on
         branding, digital media, and clean web layouts. My work combines visual identity,
         storytelling, and modern design to create clear and engaging experiences.
       </p>
 
-      <!-- These links guide visitors to other important pages on my portfolio site. -->
+      <!-- Quick links -->
       <div class="intro-a-links">
         <a href="gallery.html">Gallery</a>
         <a href="media.html">Media</a>
@@ -77,8 +77,10 @@
       </div>
 
     </section>
+							  
+							  
 
-    <!-- This section explains more about my background and creative interests. -->
+    <!-- This section explains more about my creative background. -->
     <section class="work-section">
 
       <h2>My Creative Story</h2>
@@ -103,15 +105,51 @@
       </p>
 
     </section>
+	  
+	  <!-- This scrolling gallery was inspired by Dr. Gilliam's Visual Playground examples.
+I wanted to experiment with a more visual and interactive way to showcase my creative work. -->
+<section class="about-marquee-section">
 
-    <!-- This timeline section explains my design process step by step. -->
+  <h2>What I Create</h2>
+
+  <div class="about-marquee-track">
+
+    <div class="about-marquee-inner">
+
+      <img src="assets/work1.png" alt="project preview">
+
+      <img src="assets/work2.png" alt="project preview">
+
+      <img src="assets/work3.png" alt="project preview">
+
+      <img src="assets/work4.png" alt="design preview">
+
+      <img src="assets/work5.png" alt="project preview">
+
+      <img src="assets/work6.png" alt="project preview">
+
+      <img src="assets/work7.png" alt="project preview">
+
+      <img src="assets/work8.png" alt="project preview">
+
+      <img src="assets/work9.png" alt="project preview">
+
+      <img src="assets/logo.png" alt="Personal logo and branding design">
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- This timeline section explains my design process in a visual way. -->
     <section class="work-section">
 
       <h2>How I Work</h2>
 
       <div class="timeline">
 
-        <!-- This first step focuses on understanding the project goals. -->
+        <!-- Process step 1 -->
         <div class="tl-item">
 
           <div class="tl-dot"></div>
@@ -129,7 +167,7 @@
 
         </div>
 
-        <!-- This step focuses on planning the layout and structure. -->
+        <!-- Process step 2 -->
         <div class="tl-item">
 
           <div class="tl-dot"></div>
@@ -147,7 +185,7 @@
 
         </div>
 
-        <!-- This step focuses on building the visual design. -->
+        <!-- Process step 3 -->
         <div class="tl-item">
 
           <div class="tl-dot"></div>
@@ -165,7 +203,7 @@
 
         </div>
 
-        <!-- This final step focuses on revisions and improvements. -->
+        <!-- Process step 4 -->
         <div class="tl-item">
 
           <div class="tl-dot"></div>
@@ -187,9 +225,11 @@
 
     </section>
 
+   
+
   </main>
 
-  <!-- This footer stays consistent with the rest of the website. -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <p>&copy; Erkhes Otgontsetseg 2026</p>
   </footer>
